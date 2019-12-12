@@ -39,6 +39,7 @@ class RunDetailsViewController: UIViewController {
   }
 
   // Navigation dans l'application
+  // Permet d'afficher la course sur la carte, et d'afficher le parcours sur forme de trait bleu
   private func configureView() {
     let distance = Measurement(value: run.distance, unit: UnitLength.meters)
     let seconds = Int(run.duration)
@@ -47,12 +48,12 @@ class RunDetailsViewController: UIViewController {
     let formattedTime = FormatDisplay.time(seconds)
     let formattedPace = FormatDisplay.pace(distance: distance,
                                            seconds: seconds,
-                                           outputUnit: UnitSpeed.minutesPerMile)
+                                           outputUnit: UnitSpeed.minutesPerKilometer)
     
     distanceLabel.text = "Distance:  \(formattedDistance)"
     dateLabel.text = formattedDate
     timeLabel.text = "Temps:  \(formattedTime)"
-    paceLabel.text = "Vitesse:  \(formattedPace)"
+    paceLabel.text = "Moyenne:  \(formattedPace)"
     
     loadMap()
     
@@ -60,6 +61,7 @@ class RunDetailsViewController: UIViewController {
     badgeImageView.image = UIImage(named: badge.imageName)
   }
   
+  // Définition de l'affichage de la carte sur l'écran : point central, la portée horizontale et verticale de celui-ci
   private func mapRegion() -> MKCoordinateRegion? {
     guard
       let locations = run.locations,
@@ -92,20 +94,23 @@ class RunDetailsViewController: UIViewController {
   
   private func polyLine() -> [MulticolorPolyline] {
     
-    // 1
+    // Un polyLine est fait de segments qui sont chacun marqué par leur point de fin
+    // On collecte les coordonnées et on les compare par deux pour avoir chaque vitesse de segment
     let locations = run.locations?.array as! [Location]
     var coordinates: [(CLLocation, CLLocation)] = []
     var speeds: [Double] = []
     var minSpeed = Double.greatestFiniteMagnitude
     var maxSpeed = 0.0
     
-    // 2
+    // Convertion de chaque point de fin en un objet CLLocation
+    // Sauvegarde deux par deux
     for (first, second) in zip(locations, locations.dropFirst()) {
       let start = CLLocation(latitude: first.latitude, longitude: first.longitude)
       let end = CLLocation(latitude: second.latitude, longitude: second.longitude)
       coordinates.append((start, end))
       
-      //3
+      // Calcul de la vitesse par segment
+      // MaJ des vitesses max et min
       let distance = end.distance(from: start)
       let time = second.timestamp!.timeIntervalSince(first.timestamp! as Date)
       let speed = time > 0 ? distance / time : 0
@@ -114,10 +119,11 @@ class RunDetailsViewController: UIViewController {
       maxSpeed = max(maxSpeed, speed)
     }
     
-    //4
+    // Calcul de la vitesse moyenne
     let midSpeed = speeds.reduce(0, +) / Double(speeds.count)
     
-    //5
+    // On utilise les coordonées deux par deux pour créer un nouvel MulticolorPolyline
+    // On y ajoute les couleurs en fonction des vitesses
     var segments: [MulticolorPolyline] = []
     for ((start, end), speed) in zip(coordinates, speeds) {
       let coords = [start.coordinate, end.coordinate]
@@ -131,6 +137,8 @@ class RunDetailsViewController: UIViewController {
     return segments
   }
   
+  // On vérifie bien qu'il y a quelque chose à dessiner (un parcours)
+  // Ensuite on met en place la Map et on ajoute l'overlay
   private func loadMap() {
     guard
       let locations = run.locations,
@@ -150,6 +158,7 @@ class RunDetailsViewController: UIViewController {
     mapView.addAnnotations(annotations())
   }
   
+  // Définition des couleurs lors du parcours, afin que l'utilisateur puisse voir où il a ralentit ou accéléré
   private func segmentColor(speed: Double, midSpeed: Double, slowestSpeed: Double, fastestSpeed: Double) -> UIColor {
     enum BaseColors {
       static let r_red: CGFloat = 1

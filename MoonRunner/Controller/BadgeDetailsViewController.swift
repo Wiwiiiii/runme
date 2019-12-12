@@ -29,7 +29,7 @@ class BadgeDetailsViewController: UIViewController {
     let bestDistance = Measurement(value: status.best!.distance, unit: UnitLength.meters)
     let bestPace = FormatDisplay.pace(distance: bestDistance,
                                       seconds: Int(status.best!.duration),
-                                      outputUnit: UnitSpeed.minutesPerMile)
+                                      outputUnit: UnitSpeed.minutesPerKilometer)
     let bestDate = FormatDisplay.date(status.earned?.timestamp)
     bestLabel.text = "Meilleure course : \(bestPace), \(bestDate)"
     
@@ -46,8 +46,8 @@ class BadgeDetailsViewController: UIViewController {
       let silverDistance = earnedDistance * BadgeStatus.silverMultiplier
       let pace = FormatDisplay.pace(distance: silverDistance,
                                     seconds: earnedDuration,
-                                    outputUnit: UnitSpeed.minutesPerMile)
-      silverLabel.text = "Vitesse < \(pace) pour la médaille d'argent ! "
+                                    outputUnit: UnitSpeed.minutesPerKilometer)
+      silverLabel.text = "Moyenne < \(pace) pour la médaille d'argent ! "
     }
     
     if let gold = status.gold {
@@ -60,8 +60,8 @@ class BadgeDetailsViewController: UIViewController {
       let goldDistance = earnedDistance * BadgeStatus.goldMultiplier
       let pace = FormatDisplay.pace(distance: goldDistance,
                                     seconds: earnedDuration,
-                                    outputUnit: UnitSpeed.minutesPerMile)
-      goldLabel.text = "Vitesse < \(pace) pour la médaille d'or ! "
+                                    outputUnit: UnitSpeed.minutesPerKilometer)
+      goldLabel.text = "Moyenne < \(pace) pour la médaille d'or ! "
     }
   }
   

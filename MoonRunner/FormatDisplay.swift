@@ -37,7 +37,8 @@ struct FormatDisplay {
   static func date(_ timestamp: Date?) -> String {
     guard let timestamp = timestamp as Date? else { return "" }
     let formatter = DateFormatter()
-    formatter.dateStyle = .medium
+    formatter.locale = Locale(identifier: "fr_FR")
+    formatter.dateStyle = .full
     return formatter.string(from: timestamp)
   }
 }

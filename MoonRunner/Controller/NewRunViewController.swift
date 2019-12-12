@@ -70,10 +70,12 @@ class NewRunViewController: UIViewController {
     alertController.addAction(UIAlertAction(title: "Annuler", style: .cancel))
     alertController.addAction(UIAlertAction(title: "Sauvegarder", style: .default) { _ in
       self.stopRun()
+      // Sauvegarde dans la BDD
       self.saveRun()
       self.performSegue(withIdentifier: .details, sender: nil)
     })
     alertController.addAction(UIAlertAction(title: "Rejeter", style: .destructive) { _ in
+      // Pas de sauvegarde comme il ne veut pas la garder dans son historique
       self.stopRun()
       _ = self.navigationController?.popToRootViewController(animated: true)
     })
@@ -81,7 +83,9 @@ class NewRunViewController: UIViewController {
     present(alertController, animated: true)
   }
   
+  
   private func startRun() {
+    // On cache ou non des boutons/éléments de l'interface
     launchPromptStackView.isHidden = true
     dataStackView.isHidden = false
     startButton.isHidden = true
@@ -89,6 +93,8 @@ class NewRunViewController: UIViewController {
     mapContainerView.isHidden = false
     mapView.removeOverlays(mapView.overlays)
     
+    // Cela réinitialise toutes les valeurs à mettre à jour pendant l'exécution à leur état initial
+    // Démarre le timer qui se déclenche chaque seconde et commence à collecter les mises à jour d'emplacement.
     seconds = 0
     distance = Measurement(value: 0, unit: UnitLength.meters)
     locationList.removeAll()
@@ -103,6 +109,7 @@ class NewRunViewController: UIViewController {
   }
   
   private func stopRun() {
+    // On cache les boutons/éléments de l'interface
     launchPromptStackView.isHidden = false
     dataStackView.isHidden = true
     startButton.isHidden = false
@@ -110,6 +117,7 @@ class NewRunViewController: UIViewController {
     mapContainerView.isHidden = true
     badgeStackView.isHidden = true
     
+    // Quand l'utilisateur a finit sa course, on veut arrêter de tracker sa position
     locationManager.stopUpdatingLocation()
   }
   
@@ -137,13 +145,18 @@ class NewRunViewController: UIViewController {
     badgeInfoLabel.text = "\(formattedDistanceRemaining) avant \(upcomingBadge.name)"
   }
   
+  // Reçoit et procède à la MaJ de la localisation
   private func startLocationUpdates() {
     locationManager.delegate = self
+    //activityType : aide l'application à consommer moins pendant la course de l'utilisateur
     locationManager.activityType = .fitness
+    // La distance horizontale minimale, en mètres, que l'appareil doit parcourir avant d'émettre une mise à jour de position.
     locationManager.distanceFilter = 10
+    // Démarre la MaJ
     locationManager.startUpdatingLocation()
   }
   
+  // Permet de sauvegarder la course de l'utilisateur en BDD
   private func saveRun() {
     let newRun = Run(context: CoreDataStack.context)
     newRun.distance = distance.value
@@ -205,6 +218,9 @@ extension NewRunViewController: CLLocationManagerDelegate {
       if let lastLocation = locationList.last {
         let delta = newLocation.distance(from: lastLocation)
         distance = distance + Measurement(value: delta, unit: UnitLength.meters)
+        // coordinates et region
+        // Permettent d'ajouter le segment blue sur la map et de faire la MaJ de cette map pour la garder
+        // Focus sur le lieu où l'utilisateur fait sa course
         let coordinates = [lastLocation.coordinate, newLocation.coordinate]
         mapView.add(MKPolyline(coordinates: coordinates, count: 2))
         let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500)
@@ -217,7 +233,8 @@ extension NewRunViewController: CLLocationManagerDelegate {
 }
 
 // MARK: - Map View Delegate
-
+// Permet de faire en rendu pour les lignes sur la carte
+// La ligne est de base bleu pendant la course sur la map
 extension NewRunViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
     guard let polyline = overlay as? MKPolyline else {
