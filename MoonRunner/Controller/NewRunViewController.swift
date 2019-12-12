@@ -218,7 +218,6 @@ extension NewRunViewController: CLLocationManagerDelegate {
       if let lastLocation = locationList.last {
         let delta = newLocation.distance(from: lastLocation)
         distance = distance + Measurement(value: delta, unit: UnitLength.meters)
-        //
         // coordinates et region
         // Permettent d'ajouter le segment blue sur la map et de faire la MaJ de cette map pour la garder
         // Focus sur le lieu où l'utilisateur fait sa course
