@@ -4,6 +4,8 @@ import UIKit
 
 class BadgeDetailsViewController: UIViewController {
   
+  // Liaison interface - controller
+  
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var distanceLabel: UILabel!
@@ -15,6 +17,9 @@ class BadgeDetailsViewController: UIViewController {
   @IBOutlet weak var goldImageView: UIImageView!
   
   var status: BadgeStatus!
+  
+  // Définit les labels dans la vue détaillée à partir des informations BadgeStatus
+  // On configure les badges d'or et d'argent
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,6 +40,9 @@ class BadgeDetailsViewController: UIViewController {
     
     let earnedDistance = Measurement(value: status.earned!.distance, unit: UnitLength.meters)
     let earnedDuration = Int(status.earned!.duration)
+    
+    
+    // Les badges or et argent sont masquées lorsque cela est nécessaire en définissant leurs alphas sur 0.
     
     if let silver = status.silver {
       silverImageView.transform = badgeRotation
@@ -64,6 +72,8 @@ class BadgeDetailsViewController: UIViewController {
       goldLabel.text = "Moyenne < \(pace) pour la médaille d'or ! "
     }
   }
+  
+  // Invoqué lorsque le bouton info est enfoncé et affichera une fenêtre contextuelle avec les informations du badge.
   
   @IBAction func infoButtonTapped() {
     let alert = UIAlertController(title: status.badge.name,

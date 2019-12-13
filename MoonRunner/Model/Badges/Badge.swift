@@ -2,6 +2,7 @@
 
 import Foundation
 
+// Définit la structure du badge et fournit un initialiseur disponible pour extraire les informations de l'objet JSON
 struct Badge {
   let name: String
   let imageName: String
@@ -24,6 +25,8 @@ struct Badge {
     self.distance = distance
   }
   
+  // Utilisation des données JSON et flatMap pour supprimer toutes les structures qui ne parviennent pas à s'initialiser.
+  // allBadges est déclaré statique afin que l'opération d'analyse ne se produise qu'une seule fois.
   static let allBadges: [Badge] = {
     guard let fileURL = Bundle.main.url(forResource: "badges", withExtension: "txt") else {
       fatalError("No badges.txt file found")
@@ -36,6 +39,8 @@ struct Badge {
       fatalError("Cannot decode badges.txt")
     }
   }()
+  
+  // Chacune de ces méthodes filtre la liste des badges selon qu'ils ont été gagnés ou ne sont pas encore gagnés.
   
   static func best(for distance: Double) -> Badge {
     return allBadges.filter { $0.distance < distance }.last ?? allBadges.first!

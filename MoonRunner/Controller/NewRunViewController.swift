@@ -35,6 +35,8 @@ class NewRunViewController: UIViewController {
   // Tableau stockant tous les objets CLLocation pendant la course
   private var locationList: [CLLocation] = []
   private var upcomingBadge: Badge!
+  
+  // Un son est produit quand l'utilisateur arrive à compléter un défi/badge
   private let successSound: AVAudioPlayer = {
     guard let successSound = NSDataAsset(name: "success") else {
       return AVAudioPlayer()
@@ -98,6 +100,8 @@ class NewRunViewController: UIViewController {
     seconds = 0
     distance = Measurement(value: 0, unit: UnitLength.meters)
     locationList.removeAll()
+    
+    // Montre le premier badge à gagner
     badgeStackView.isHidden = false
     upcomingBadge = Badge.next(for: 0)
     badgeImageView.image = UIImage(named: upcomingBadge.imageName)
@@ -115,6 +119,8 @@ class NewRunViewController: UIViewController {
     startButton.isHidden = false
     stopButton.isHidden = true
     mapContainerView.isHidden = true
+    
+    // Les informations de badge doivent être cachées entre les courses
     badgeStackView.isHidden = true
     
     // Quand l'utilisateur a finit sa course, on veut arrêter de tracker sa position
@@ -140,6 +146,7 @@ class NewRunViewController: UIViewController {
     timeLabel.text = "Temps:  \(formattedTime)"
     paceLabel.text = "Vitesse:  \(formattedPace)"
     
+    // Garde l'utilisateur à jour sur le prochain badge à gagner
     let distanceRemaining = upcomingBadge.distance - distance.value
     let formattedDistanceRemaining = FormatDisplay.distance(distanceRemaining)
     badgeInfoLabel.text = "\(formattedDistanceRemaining) avant \(upcomingBadge.name)"
@@ -176,6 +183,8 @@ class NewRunViewController: UIViewController {
     run = newRun
   }
   
+  // Détecte lorsqu'un badge a été obtenu, met à jour l'interface utilisateur pour afficher le prochain badge
+  // Emet un son de succès pour célébrer la fin d'un badge.
   private func checkNextBadge() {
     let nextBadge = Badge.next(for: distance.value)
     if upcomingBadge != nextBadge {

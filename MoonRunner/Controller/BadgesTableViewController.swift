@@ -5,6 +5,8 @@ import CoreData
 
 class BadgesTableViewController: UITableViewController {
   
+  // Lorsque la vue se charge, on demande au CoreData une liste de toutes les courses terminées et triées par date
+  // On l'utilise pour créer la liste des badges gagnés.
   var statusList: [BadgeStatus]!
   
   override func viewDidLoad() {
@@ -26,6 +28,11 @@ class BadgesTableViewController: UITableViewController {
 
 // MARK: - Table View Data Source
 
+/*
+Méthodes UITableViewDataSource standard requises par tous les UITableViewControllers
+Renvoyant le nombre de lignes et les cellules configurées au tableau.
+Tout comme dans la partie 1, vous réduisez le code «typé en chaîne» en retirant la cellule de la file d'attente via une méthode générique définie dans StoryboardSupport.swift.
+ */
 extension BadgesTableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return statusList.count
@@ -39,7 +46,7 @@ extension BadgesTableViewController {
 }
 
 // MARK: - Navigation
-
+// Permet de passer un BadgeStatus à BadgeDetailsViewController lorsque l'utilisateur appuie sur un badge dans le tableau.
 extension BadgesTableViewController: SegueHandlerType {
   enum SegueIdentifier: String {
     case details = "BadgeDetailsViewController"

@@ -2,6 +2,9 @@
 
 import Foundation
 
+// Définit la structure BadgeStatus et les multiplicateurs qui déterminent combien le temps d'un utilisateur doit s'améliorer
+// pour gagner un badge argent ou or.
+
 struct BadgeStatus {
   let badge: Badge
   let earned: Run?
@@ -12,6 +15,11 @@ struct BadgeStatus {
   static let silverMultiplier = 1.05
   static let goldMultiplier = 1.1
   
+  /*
+   Cette méthode compare chacune des courses de l'utilisateur aux exigences de distance pour chaque badge, créant les associations et renvoyant un tableau de valeurs BadgeStatus pour chaque badge gagné.
+   La première fois qu'un utilisateur gagne un badge, la vitesse de cette course devient la référence utilisée pour déterminer si les courses suivantes se sont suffisamment améliorées pour se qualifier pour les versions argent ou or.
+   Enfin, elle permet de suivre la course la plus rapide de l'utilisateur jusqu'à la distance de chaque badge.
+   */
   static func badgesEarned(runs: [Run]) -> [BadgeStatus] {
     return Badge.allBadges.map { badge in
       var earned: Run?

@@ -21,6 +21,8 @@ class RunDetailsViewController: UIViewController {
     configureView()
   }
   
+  // Lorsque la valeur du switch change, on rend visible l'ImageView
+  // du bouton Info et de la map en modifiant leurs valeurs alpha
   @IBAction func displayModeToggled(_ sender: UISwitch) {
     UIView.animate(withDuration: 0.2) {
       self.badgeImageView.alpha = sender.isOn ? 1 : 0
@@ -29,6 +31,7 @@ class RunDetailsViewController: UIViewController {
     }
   }
   
+  // Invoqué lorsque le bouton info est enfoncé et affichera une fenêtre contextuelle avec les informations du badge.
   @IBAction func infoButtonTapped() {
     let badge = Badge.best(for: run.distance)
     let alert = UIAlertController(title: badge.name,
@@ -57,6 +60,7 @@ class RunDetailsViewController: UIViewController {
     
     loadMap()
     
+    // On trouve le dernier badge que l'utilisateur a gagné lors de la course et on l'affiche
     let badge = Badge.best(for: run.distance)
     badgeImageView.image = UIImage(named: badge.imageName)
   }
@@ -155,6 +159,8 @@ class RunDetailsViewController: UIViewController {
     
     mapView.setRegion(region, animated: true)
     mapView.addOverlays(polyLine())
+    
+    // Met des annotations sur la carte
     mapView.addAnnotations(annotations())
   }
   
@@ -191,6 +197,7 @@ class RunDetailsViewController: UIViewController {
     return UIColor(red: red, green: green, blue: blue, alpha: 1)
   }
   
+  // Création d'un tableau d'objet BadgeAnnotation, un pour chaque badge gagné pendant la course
   private func annotations() -> [BadgeAnnotation] {
     var annotations: [BadgeAnnotation] = []
     let badgesEarned = Badge.allBadges.filter { $0.distance < run.distance }
@@ -231,6 +238,7 @@ extension RunDetailsViewController: MKMapViewDelegate {
     return renderer
   }
   
+  // On créé un MKAnnotationView pour chaque annotation et on le configure pour afficher l'image du badge.
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     guard let annotation = annotation as? BadgeAnnotation else { return nil }
     let reuseID = "checkpoint"
