@@ -29,6 +29,7 @@
 		18CF26EF1E80291E0097F88C /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26EE1E80291E0097F88C /* NewRunViewController.swift */; };
 		18CF26F11E80292C0097F88C /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */; };
 		7F0B31EF23DED60900740BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B31EE23DED60900740BA1 /* GoogleService-Info.plist */; };
+		7F2F20AA23DEEC5E001181F9 /* ProfilSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */; };
 		7F2FDF7F23A23A0700466FE4 /* logo_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2FDF7E23A23A0700466FE4 /* logo_noir.png */; };
 		88B20829271C167C547B786E /* Pods_MoonRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0AF3A728529834E7749FE2 /* Pods_MoonRunner.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		18CF26EE1E80291E0097F88C /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
 		7F0B31EE23DED60900740BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilSelectionViewController.swift; sourceTree = "<group>"; };
 		7F2FDF7E23A23A0700466FE4 /* logo_noir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_noir.png; sourceTree = "<group>"; };
 		86C7083898057017C2C55A32 /* Pods-MoonRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.debug.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.debug.xcconfig"; sourceTree = "<group>"; };
 		D683FBDE31CA40B35CD1A97C /* Pods-MoonRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.release.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				18CF26EC1E80290C0097F88C /* HomeViewController.swift */,
 				18CF26EE1E80291E0097F88C /* NewRunViewController.swift */,
 				18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */,
+				7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */,
 				1809248A1EF43B39007CF38F /* BadgesTableViewController.swift */,
 				1809248C1EF43E84007CF38F /* BadgeDetailsViewController.swift */,
 			);
@@ -350,6 +353,7 @@
 				187AF9A71EF2FC1200C2B8E7 /* FormatDisplay.swift in Sources */,
 				180924871EF4369B007CF38F /* BadgeStatus.swift in Sources */,
 				18350CE81E882A860054E1C6 /* StoryboardSupport.swift in Sources */,
+				7F2F20AA23DEEC5E001181F9 /* ProfilSelectionViewController.swift in Sources */,
 				1809248B1EF43B39007CF38F /* BadgesTableViewController.swift in Sources */,
 				187AF99D1EF2F78500C2B8E7 /* UnitExtensions.swift in Sources */,
 				1809248F1EF47583007CF38F /* BadgeAnnotation.swift in Sources */,
