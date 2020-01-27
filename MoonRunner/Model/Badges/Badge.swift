@@ -34,7 +34,7 @@ struct Badge {
     do {
       let jsonData = try Data(contentsOf: fileURL, options: .mappedIfSafe)
       let jsonResult = try JSONSerialization.jsonObject(with: jsonData) as! [[String: String]]
-      return jsonResult.flatMap(Badge.init)
+      return jsonResult.compactMap(Badge.init)
     } catch {
       fatalError("Cannot decode badges.txt")
     }
