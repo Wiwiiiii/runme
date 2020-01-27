@@ -31,6 +31,8 @@
 		7F0B31EF23DED60900740BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B31EE23DED60900740BA1 /* GoogleService-Info.plist */; };
 		7F2F20AA23DEEC5E001181F9 /* ProfilSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */; };
 		7F2FDF7F23A23A0700466FE4 /* logo_noir.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F2FDF7E23A23A0700466FE4 /* logo_noir.png */; };
+		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
+		7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */; };
 		88B20829271C167C547B786E /* Pods_MoonRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0AF3A728529834E7749FE2 /* Pods_MoonRunner.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		7F0B31EE23DED60900740BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilSelectionViewController.swift; sourceTree = "<group>"; };
 		7F2FDF7E23A23A0700466FE4 /* logo_noir.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_noir.png; sourceTree = "<group>"; };
+		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
+		7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCreationViewController.swift; sourceTree = "<group>"; };
 		86C7083898057017C2C55A32 /* Pods-MoonRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.debug.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.debug.xcconfig"; sourceTree = "<group>"; };
 		D683FBDE31CA40B35CD1A97C /* Pods-MoonRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.release.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.release.xcconfig"; sourceTree = "<group>"; };
 		DA0AF3A728529834E7749FE2 /* Pods_MoonRunner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonRunner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +169,8 @@
 				7F2F20A923DEEC5E001181F9 /* ProfilSelectionViewController.swift */,
 				1809248A1EF43B39007CF38F /* BadgesTableViewController.swift */,
 				1809248C1EF43E84007CF38F /* BadgeDetailsViewController.swift */,
+				7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */,
+				7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -343,10 +349,12 @@
 				180924851EF434F3007CF38F /* Badge.swift in Sources */,
 				18888DD91E7F1D940038A3AF /* CoreDataStack.swift in Sources */,
 				187AF9A91EF3170700C2B8E7 /* LocationManager.swift in Sources */,
+				7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */,
 				18888DCB1E7F0FA80038A3AF /* MoonRunner.xcdatamodeld in Sources */,
 				18CF26F11E80292C0097F88C /* RunDetailsViewController.swift in Sources */,
 				1809248D1EF43E84007CF38F /* BadgeDetailsViewController.swift in Sources */,
 				180924821EF33DE2007CF38F /* MulticolorPolyline.swift in Sources */,
+				7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */,
 				18888DC31E7F0FA80038A3AF /* AppDelegate.swift in Sources */,
 				18CF26ED1E80290C0097F88C /* HomeViewController.swift in Sources */,
 				187AF9A71EF2FC1200C2B8E7 /* FormatDisplay.swift in Sources */,

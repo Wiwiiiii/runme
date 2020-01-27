@@ -2,11 +2,10 @@
 import UIKit
 import Foundation
 
-class ProfilSelectionViewController: UIViewController {
+class ProfilDetailSelectionViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
   }
   
 }
-
