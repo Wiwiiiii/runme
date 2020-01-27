@@ -231,8 +231,8 @@ extension NewRunViewController: CLLocationManagerDelegate {
         // Permettent d'ajouter le segment blue sur la map et de faire la MaJ de cette map pour la garder
         // Focus sur le lieu où l'utilisateur fait sa course
         let coordinates = [lastLocation.coordinate, newLocation.coordinate]
-        mapView.add(MKPolyline(coordinates: coordinates, count: 2))
-        let region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500)
+        mapView.addOverlay(MKPolyline(coordinates: coordinates, count: 2))
+        let region = MKCoordinateRegion.init(center: newLocation.coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
         mapView.setRegion(region, animated: true)
       }
       
