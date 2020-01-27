@@ -1,6 +1,7 @@
 
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Pour utiliser la localisation, on demande l'autorisation à l'utilisateur
     let locationManager = LocationManager.shared
     locationManager.requestWhenInUseAuthorization()
+    
+    FirebaseApp.configure()
     return true
   }
   
