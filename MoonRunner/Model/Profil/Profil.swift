@@ -1,5 +1,5 @@
 import Foundation
-//
+
 struct Profil{
   let sexe: String?
   let taille: Double?
@@ -8,5 +8,4 @@ struct Profil{
   let prenom: String?
   let email: String?
   let poids: Double?
-  //
-  }
+}

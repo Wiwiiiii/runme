@@ -1,10 +1,8 @@
-//
 import UIKit
 import Foundation
-//
+
 class ProfilCreationViewController: UIViewController {
-  // Liaison interface - controller
-  //
+  
   @IBOutlet weak var tailleProfil: UITextField!
   @IBOutlet weak var nomProfil: UITextField!
   @IBOutlet weak var ageProfil: UITextField!
@@ -12,27 +10,42 @@ class ProfilCreationViewController: UIViewController {
   @IBOutlet weak var mailProfil: UITextField!
   @IBOutlet weak var poidsProfil: UITextField!
   @IBOutlet weak var sexeProfil: UISegmentedControl!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
 
-  
-  
   @IBAction func createProfil(_ sender: Any) {
-    guard let sexe = sexeProfil.titleForSegment(at: sexeProfil.selectedSegmentIndex),
-        let taille = Double(tailleProfil.text!),
-        let nom = nomProfil.text,
-        let age = Int(ageProfil.text!),
-        let prenom = prenomProfil.text,
-        let email = mailProfil.text,
-        let poids = Double(poidsProfil.text!)
-    else {
-            return
-    }
-
-    let profil = Profil(sexe: sexe, taille: taille, nom: nom, age: age, prenom: prenom, email: email, poids: poids)
+  
+    let profil = self.createProfil(sexe: sexeProfil.titleForSegment(at: sexeProfil.selectedSegmentIndex),
+                                   taille: tailleProfil.text?.doubleValueOrNil,
+                                   nom: nomProfil.text,
+                                   age: ageProfil.text?.intValueOrNil,
+                                   prenom: prenomProfil.text,
+                                   email: mailProfil.text,
+                                   poids: poidsProfil.text?.doubleValueOrNil)
+    
     //ToyService.shared.add(toy: toy)
 
     navigationController?.popViewController(animated: true)
   }
+  
+  
+  /// Creation d'un profil depuis le model profile
+  /// - Parameter sexe: String?
+  /// - Parameter taille: Double?
+  /// - Parameter nom: String?
+  /// - Parameter age: Int?
+  /// - Parameter prenom: String?
+  /// - Parameter email: String?
+  /// - Parameter poids: Double?
+  private func createProfil(sexe: String?, taille: Double?, nom: String?,
+                            age: Int?, prenom: String?, email: String?,
+                            poids: Double?) -> Profil {
+    
+    return Profil(sexe: sexe, taille: taille, nom: nom, age: age,
+                  prenom: prenom, email: email, poids: poids)
+  }
+  
+  
 }

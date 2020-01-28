@@ -34,9 +34,10 @@
 		7F32BD0923E027060040F12C /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0823E027060040F12C /* ProfilTableViewController.swift */; };
 		7F32BD0B23E028CE0040F12C /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0A23E028CE0040F12C /* ProfilCell.swift */; };
 		7F32BD0D23E04AA80040F12C /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0C23E04AA80040F12C /* Profil.swift */; };
-		7F32BD1223E065180040F12C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F32BD1123E065180040F12C /* GoogleService-Info.plist */; };
 		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
 		7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */; };
+		F935B86823E0D0D2009F866E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F935B86723E0D0D2009F866E /* GoogleService-Info.plist */; };
+		F935B86B23E0D744009F866E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F935B86A23E0D744009F866E /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,10 +71,11 @@
 		7F32BD0823E027060040F12C /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
 		7F32BD0A23E028CE0040F12C /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
 		7F32BD0C23E04AA80040F12C /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
-		7F32BD1123E065180040F12C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCreationViewController.swift; sourceTree = "<group>"; };
 		A0856D8D872C42F228F170EB /* Pods-MoonRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.release.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.release.xcconfig"; sourceTree = "<group>"; };
+		F935B86723E0D0D2009F866E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F935B86A23E0D744009F866E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +133,8 @@
 		18888DC11E7F0FA80038A3AF /* MoonRunner */ = {
 			isa = PBXGroup;
 			children = (
-				7F32BD1123E065180040F12C /* GoogleService-Info.plist */,
+				F935B86923E0D72A009F866E /* utils */,
+				F935B86723E0D0D2009F866E /* GoogleService-Info.plist */,
 				18888DC21E7F0FA80038A3AF /* AppDelegate.swift */,
 				7F50D2D623A1263600482404 /* Model */,
 				18CF26EB1E8028D40097F88C /* Controller */,
@@ -226,6 +229,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F935B86923E0D72A009F866E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F935B86A23E0D744009F866E /* StringExtension.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +249,7 @@
 				18888DBC1E7F0FA80038A3AF /* Frameworks */,
 				18888DBD1E7F0FA80038A3AF /* Resources */,
 				539B842C4AA5B18E29440AD6 /* [CP] Embed Pods Frameworks */,
+				F935B86623E0CDEB009F866E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -299,7 +311,7 @@
 				7F2FDF7F23A23A0700466FE4 /* logo_noir.png in Resources */,
 				18CF26EA1E80265F0097F88C /* badges.txt in Resources */,
 				18888DC81E7F0FA80038A3AF /* Main.storyboard in Resources */,
-				7F32BD1223E065180040F12C /* GoogleService-Info.plist in Resources */,
+				F935B86823E0D0D2009F866E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +368,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F935B86623E0CDEB009F866E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -383,6 +412,7 @@
 				18350CE81E882A860054E1C6 /* StoryboardSupport.swift in Sources */,
 				7F2F20AA23DEEC5E001181F9 /* ProfilSelectionViewController.swift in Sources */,
 				1809248B1EF43B39007CF38F /* BadgesTableViewController.swift in Sources */,
+				F935B86B23E0D744009F866E /* StringExtension.swift in Sources */,
 				187AF99D1EF2F78500C2B8E7 /* UnitExtensions.swift in Sources */,
 				1809248F1EF47583007CF38F /* BadgeAnnotation.swift in Sources */,
 				180924891EF438BD007CF38F /* BadgeCell.swift in Sources */,
