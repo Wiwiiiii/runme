@@ -9,8 +9,14 @@ target 'MoonRunner' do
     pod 'SwiftGifOrigin', '~> 1.7.0'
     pod "PromiseKit"
     pod 'Alamofire', '4.8'
+
   # add the Firebase pod for Google Analytics
     pod 'Firebase/Analytics'
+
+  #Pod for lint
+
+    pod 'SwiftLint'
+
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 end
