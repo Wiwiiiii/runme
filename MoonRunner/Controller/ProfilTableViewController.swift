@@ -16,15 +16,15 @@ class ProfilTableViewController: UITableViewController {
   
   private func loadSampleProfils() {
     
-    guard let profil1 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4,5) else {
+    guard let profil1 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4.5) else {
         fatalError("Unable to instantiate profil1")
     }
     
-    guard let profil2 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4,5) else {
+    guard let profil2 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4.5) else {
         fatalError("Unable to instantiate profil2")
     }
     
-    guard let profil3 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4,5) else {
+    guard let profil3 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4.5) else {
         fatalError("Unable to instantiate profil3")
     }
     
