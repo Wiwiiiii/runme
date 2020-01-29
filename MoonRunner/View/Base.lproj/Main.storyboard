@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fqF-wD-Zbq" customClass="ProfilCell" customModule="MoonRunner" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfilCell" id="fqF-wD-Zbq" customClass="ProfilCell" customModule="MoonRunner" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqF-wD-Zbq" id="5Je-76-1NZ">
@@ -30,7 +30,7 @@
                                                 <constraint firstAttribute="height" constant="44" id="RSd-GR-M5g"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="JH2-Ew-5Rw">
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="JH2-Ew-5Rw">
                                             <rect key="frame" x="96" y="-1" width="291" height="20.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-l2-gwb">
@@ -52,6 +52,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="x7v-KB-mLb" firstAttribute="centerY" secondItem="JH2-Ew-5Rw" secondAttribute="centerY" id="EC6-k1-NS1"/>
+                                                <constraint firstItem="SYa-l2-gwb" firstAttribute="centerY" secondItem="JH2-Ew-5Rw" secondAttribute="centerY" id="Ymf-lO-aEW"/>
+                                                <constraint firstItem="VIK-wt-Vk3" firstAttribute="centerY" secondItem="JH2-Ew-5Rw" secondAttribute="centerY" id="iI8-G6-eGV"/>
+                                            </constraints>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="91" id="y6o-xJ-ZYb">
                                             <rect key="frame" x="96" y="23" width="291" height="20.5"/>
@@ -65,6 +70,10 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Taille" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lss-gK-hx6">
                                                     <rect key="frame" x="124" y="0.0" width="39" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="E0s-6T-FGT"/>
+                                                        <constraint firstAttribute="width" constant="39" id="LM9-bF-eD4"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.7773455977" green="0.1015973464" blue="0.2125645578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -76,8 +85,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tGa-be-RtJ" firstAttribute="centerY" secondItem="y6o-xJ-ZYb" secondAttribute="centerY" id="h6l-vf-VdD"/>
+                                                <constraint firstItem="lss-gK-hx6" firstAttribute="centerY" secondItem="y6o-xJ-ZYb" secondAttribute="centerY" id="jTV-iK-0yY"/>
+                                                <constraint firstItem="q0i-cd-CeG" firstAttribute="centerY" secondItem="y6o-xJ-ZYb" secondAttribute="centerY" id="lXy-0c-Ro1"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JH2-Ew-5Rw" firstAttribute="centerY" secondItem="5Je-76-1NZ" secondAttribute="centerY" id="Sr5-Yn-PR5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="ageLabelCellProfil" destination="VIK-wt-Vk3" id="IEX-Q0-Gbq"/>
