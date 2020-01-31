@@ -33,6 +33,7 @@
 		7F32BD0923E027060040F12C /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0823E027060040F12C /* ProfilTableViewController.swift */; };
 		7F32BD0B23E028CE0040F12C /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0A23E028CE0040F12C /* ProfilCell.swift */; };
 		7F32BD0D23E04AA80040F12C /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0C23E04AA80040F12C /* Profil.swift */; };
+		7F56006F23E2DC80002BB25C /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56006E23E2DC80002BB25C /* OptionsViewController.swift */; };
 		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
 		7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */; };
 		CA6CE4477854A3A7DD16F510 /* Pods_MoonRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7364E88F1A6AD9B091EF860D /* Pods_MoonRunner.framework */; };
@@ -71,6 +72,7 @@
 		7F32BD0823E027060040F12C /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
 		7F32BD0A23E028CE0040F12C /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
 		7F32BD0C23E04AA80040F12C /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		7F56006E23E2DC80002BB25C /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCreationViewController.swift; sourceTree = "<group>"; };
 		A31C9BCEEEDF1724C556CFC3 /* Pods-MoonRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.release.xcconfig"; path = "Target Support Files/Pods-MoonRunner/Pods-MoonRunner.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */,
 				7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */,
 				7F32BD0823E027060040F12C /* ProfilTableViewController.swift */,
+				7F56006E23E2DC80002BB25C /* OptionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				180924871EF4369B007CF38F /* BadgeStatus.swift in Sources */,
 				18350CE81E882A860054E1C6 /* StoryboardSupport.swift in Sources */,
 				7F2F20AA23DEEC5E001181F9 /* ProfilSelectionViewController.swift in Sources */,
+				7F56006F23E2DC80002BB25C /* OptionsViewController.swift in Sources */,
 				1809248B1EF43B39007CF38F /* BadgesTableViewController.swift in Sources */,
 				F935B86B23E0D744009F866E /* StringExtension.swift in Sources */,
 				187AF99D1EF2F78500C2B8E7 /* UnitExtensions.swift in Sources */,
