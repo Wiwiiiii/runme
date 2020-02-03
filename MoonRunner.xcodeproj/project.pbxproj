@@ -33,6 +33,7 @@
 		7F32BD0923E027060040F12C /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0823E027060040F12C /* ProfilTableViewController.swift */; };
 		7F32BD0B23E028CE0040F12C /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0A23E028CE0040F12C /* ProfilCell.swift */; };
 		7F32BD0D23E04AA80040F12C /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0C23E04AA80040F12C /* Profil.swift */; };
+		7F3CEC5B23E8087A007202C1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CEC5A23E8087A007202C1 /* CreditsViewController.swift */; };
 		7F56006F23E2DC80002BB25C /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56006E23E2DC80002BB25C /* OptionsViewController.swift */; };
 		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
 		7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */; };
@@ -72,6 +73,7 @@
 		7F32BD0823E027060040F12C /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
 		7F32BD0A23E028CE0040F12C /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
 		7F32BD0C23E04AA80040F12C /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		7F3CEC5A23E8087A007202C1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		7F56006E23E2DC80002BB25C /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCreationViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */,
 				7F32BD0823E027060040F12C /* ProfilTableViewController.swift */,
 				7F56006E23E2DC80002BB25C /* OptionsViewController.swift */,
+				7F3CEC5A23E8087A007202C1 /* CreditsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				18888DC31E7F0FA80038A3AF /* AppDelegate.swift in Sources */,
 				18CF26ED1E80290C0097F88C /* HomeViewController.swift in Sources */,
 				7F32BD0D23E04AA80040F12C /* Profil.swift in Sources */,
+				7F3CEC5B23E8087A007202C1 /* CreditsViewController.swift in Sources */,
 				7F32BD0923E027060040F12C /* ProfilTableViewController.swift in Sources */,
 				187AF9A71EF2FC1200C2B8E7 /* FormatDisplay.swift in Sources */,
 				7F32BD0B23E028CE0040F12C /* ProfilCell.swift in Sources */,
