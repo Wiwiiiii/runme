@@ -1,30 +1,28 @@
-//
-//
 import UIKit
-//
+
 // Afficher des informations sur un badge
 // Déclaration  d'une variable d'état qui est le modèle de la cellule pour qu'on puisse la répéter à l'infini
-//
+
 class BadgeCell: UITableViewCell {
-  //
+
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var silverImageView: UIImageView!
   @IBOutlet weak var goldImageView: UIImageView!
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var earnedLabel: UILabel!
-  //
+
   var status: BadgeStatus! {
     didSet {
       configure()
     }
   }
-  //
+
   private let redLabel = #colorLiteral(red: 0.7773455977, green: 0.1015973464, blue: 0.2125645578, alpha: 1)
   private let greenLabel = #colorLiteral(red: 1, green: 0.8446780443, blue: 0.2366746068, alpha: 1)
   private let badgeRotation = CGAffineTransform(rotationAngle: .pi / 8)
-  //
-  // Configuration l'affichage des cellulles dans la vue
-  //
+
+  // MARK: - Configuration l'affichage des cellulles dans la vue
+
   private func configure() {
     silverImageView.isHidden = status.silver == nil
     goldImageView.isHidden = status.gold == nil

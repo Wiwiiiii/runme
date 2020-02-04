@@ -4,18 +4,18 @@ import AVFoundation
 
 
 class OptionsViewController: UIViewController{
-  
+
 
   @IBOutlet weak var soundSegment: UISegmentedControl!
-  
+
   let musicPlayer:AVAudioPlayer = AVAudioPlayer()
   var IsMuted:Bool = false
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
   }
-  
+
   @IBAction func soundButton(_ sender: Any) {
     if(soundSegment.selectedSegmentIndex == 0)
     {

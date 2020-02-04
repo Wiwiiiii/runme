@@ -8,5 +8,5 @@ class ProfilCell: UITableViewCell{
   @IBOutlet weak var imageCellProfil: UIImageView!
   @IBOutlet weak var nomLabelCellProfil: UILabel!
   
-  
+
 }

@@ -1,9 +1,6 @@
-//
-//
 import CoreData
-//
 class CoreDataStack {
-  //
+
   static let persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: "MoonRunner")
     container.loadPersistentStores { (_, error) in
@@ -13,16 +10,16 @@ class CoreDataStack {
     }
     return container
   }()
-  //
+
   static var context: NSManagedObjectContext { return persistentContainer.viewContext }
-  //
+
   class func saveContext () {
     let context = persistentContainer.viewContext
-    //
+
     guard context.hasChanges else {
       return
     }
-    //
+
     do {
       try context.save()
     } catch {
