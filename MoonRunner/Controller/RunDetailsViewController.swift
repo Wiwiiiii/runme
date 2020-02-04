@@ -11,7 +11,8 @@ class RunDetailsViewController: UIViewController {
   @IBOutlet weak var paceLabel: UILabel!
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var badgeInfoButton: UIButton!
-
+  @IBOutlet weak var caloriesLabel: UILabel!
+  
   var run: Run!
 
   override func viewDidLoad() {
@@ -50,6 +51,9 @@ class RunDetailsViewController: UIViewController {
     let formattedPace = FormatDisplay.pace(distance: distance,
                                            seconds: seconds,
                                            outputUnit: UnitSpeed.minutesPerKilometer)
+    let poidsFixe = 60.0
+    let formattedCalories = (poidsFixe * Double(seconds) * 0.01)
+    caloriesLabel.text = "Calories : \(formattedCalories) kcal"
 
     distanceLabel.text = "Distance:  \(formattedDistance)"
     dateLabel.text = formattedDate

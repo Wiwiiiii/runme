@@ -20,7 +20,8 @@ class NewRunViewController: UIViewController {
   @IBOutlet weak var badgeStackView: UIStackView!
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var badgeInfoLabel: UILabel!
-
+  @IBOutlet weak var caloriesLabel: UILabel!
+  
   private var run: Run?
 
   // Objet que l'on va utiliser pour commencer et arrêter les services de localisation de l'application
@@ -140,7 +141,9 @@ class NewRunViewController: UIViewController {
     let formattedPace = FormatDisplay.pace(distance: distance,
                                            seconds: seconds,
                                            outputUnit: UnitSpeed.kilometersPerHour)
-
+    let poidsFixe = 60.0
+    let formattedCalories = (poidsFixe * Double(seconds) * 0.01)
+    caloriesLabel.text = "Calories : \(formattedCalories) kcal"
     distanceLabel.text = "Distance:  \(formattedDistance)"
     timeLabel.text = "Temps:  \(formattedTime)"
     paceLabel.text = "Vitesse:  \(formattedPace)"
