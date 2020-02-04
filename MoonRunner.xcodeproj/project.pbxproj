@@ -33,6 +33,7 @@
 		7F32BD0923E027060040F12C /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0823E027060040F12C /* ProfilTableViewController.swift */; };
 		7F32BD0B23E028CE0040F12C /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0A23E028CE0040F12C /* ProfilCell.swift */; };
 		7F32BD0D23E04AA80040F12C /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F32BD0C23E04AA80040F12C /* Profil.swift */; };
+		7F33A00823E96A01004BB794 /* declinaison_logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F33A00723E96A01004BB794 /* declinaison_logo_transparent.png */; };
 		7F3CEC5B23E8087A007202C1 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3CEC5A23E8087A007202C1 /* CreditsViewController.swift */; };
 		7F56006F23E2DC80002BB25C /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56006E23E2DC80002BB25C /* OptionsViewController.swift */; };
 		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
@@ -73,6 +74,7 @@
 		7F32BD0823E027060040F12C /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
 		7F32BD0A23E028CE0040F12C /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
 		7F32BD0C23E04AA80040F12C /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		7F33A00723E96A01004BB794 /* declinaison_logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = declinaison_logo_transparent.png; sourceTree = "<group>"; };
 		7F3CEC5A23E8087A007202C1 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
 		7F56006E23E2DC80002BB25C /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				7F2FDF7E23A23A0700466FE4 /* logo_noir.png */,
+				7F33A00723E96A01004BB794 /* declinaison_logo_transparent.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				18888DCD1E7F0FA80038A3AF /* Assets.xcassets in Resources */,
 				7F2FDF7F23A23A0700466FE4 /* logo_noir.png in Resources */,
 				18CF26EA1E80265F0097F88C /* badges.txt in Resources */,
+				7F33A00823E96A01004BB794 /* declinaison_logo_transparent.png in Resources */,
 				18888DC81E7F0FA80038A3AF /* Main.storyboard in Resources */,
 				F935B86823E0D0D2009F866E /* GoogleService-Info.plist in Resources */,
 			);

@@ -30,7 +30,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JH2-Ew-5Rw">
                                                     <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="Myu-09-KJh">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="Myu-09-KJh">
                                                             <rect key="frame" x="0.0" y="0.0" width="79" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="79" id="Ahr-Xe-UAE"/>
@@ -106,7 +106,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="371-O2-Yzc">
                                 <rect key="frame" x="35.5" y="85" width="343" height="463.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-Rg-Wnf">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-Rg-Wnf">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -289,7 +289,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gua-eg-70e">
                                 <rect key="frame" x="35.5" y="57" width="343" height="720"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-tr-rFE">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="rWe-tr-rFE">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -477,7 +477,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="dAw-yV-m0x">
                                 <rect key="frame" x="35.5" y="46" width="343" height="732"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-5S-RIx">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-5S-RIx">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="486"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -549,7 +549,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-TW-4jN">
                                 <rect key="frame" x="20" y="8" width="374" height="673.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="exK-yU-EHz">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="exK-yU-EHz">
                                         <rect key="frame" x="15.5" y="0.0" width="343" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -940,7 +940,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Lb2-sk-KQJ">
                                 <rect key="frame" x="35.5" y="46" width="343" height="732"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="scb-2x-yHE">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="scb-2x-yHE">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1287,7 +1287,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-jR-Dau">
                                 <rect key="frame" x="35.5" y="20" width="343" height="772"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_noir.png" translatesAutoresizingMaskIntoConstraints="NO" id="bFn-Rl-wdh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="declinaison_logo_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bFn-Rl-wdh">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="707"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="343" id="9Eo-eU-CUO"/>
@@ -1370,14 +1370,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="declinaison_logo_transparent.png" width="1242" height="752"/>
         <image name="info" width="60" height="59.5"/>
-        <image name="logo_noir.png" width="1226.4000244140625" height="732"/>
         <image name="spaceship-gold" width="100" height="137"/>
         <image name="spaceship-silver" width="100" height="137"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1ya-b0-l1N"/>
-        <segue reference="OUI-hq-5kL"/>
+        <segue reference="5G6-Su-Vfs"/>
         <segue reference="M3d-Mw-glk"/>
     </inferredMetricsTieBreakers>
 </document>
