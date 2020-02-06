@@ -23,7 +23,8 @@ struct Badge {
     self.distance = distance
   }
 
-  // Utilisation des données JSON et flatMap pour supprimer toutes les structures qui ne parviennent pas à s'initialiser.
+  // Utilisation des données JSON et flatMap pour supprimer toutes les structures
+  // qui ne parviennent pas à s'initialiser.
   // allBadges est déclaré statique afin que l'opération d'analyse ne se produise qu'une seule fois.
   static let allBadges: [Badge] = {
     guard let fileURL = Bundle.main.url(forResource: "badges", withExtension: "txt") else {
@@ -43,7 +44,7 @@ struct Badge {
   static func best(for distance: Double) -> Badge {
     return allBadges.filter { $0.distance < distance }.last ?? allBadges.first!
   }
-  
+
   static func next(for distance: Double) -> Badge {
     return allBadges.filter { distance < $0.distance }.first ?? allBadges.last!
   }
@@ -52,7 +53,7 @@ struct Badge {
 // MARK: - Equatable
 
 extension Badge: Equatable {
-  static func ==(lhs: Badge, rhs: Badge) -> Bool {
+  static func == (lhs: Badge, rhs: Badge) -> Bool {
     return lhs.name == rhs.name
   }
 }

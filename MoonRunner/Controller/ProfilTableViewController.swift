@@ -9,9 +9,8 @@ class ProfilTableViewController: UITableViewController {
   super.viewDidLoad()
   loadSampleProfils()
   }
- 
-  var profils = [Profil]()
 
+  var profils = [Profil]()
 
   private func loadSampleProfils() {
 
@@ -22,7 +21,7 @@ class ProfilTableViewController: UITableViewController {
     let profil3 = Profil(sexe: "Homme", taille: 1.20, nom: "Caprese Salad", age: 15, prenom: "Tanguy", email: "wiwi@gmail.com", poids: 4.5)
 
     profils += [profil1, profil2, profil3]
-      
+
   }
 
   override func numberOfSections(in tableView: UITableView) -> Int {
@@ -38,7 +37,6 @@ class ProfilTableViewController: UITableViewController {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ProfilCell  else {
           fatalError("La cellule n'est pas une instance de ProfilCell.")
       }
-
 
       let profil = profils[indexPath.row]
       cell.sexeLabelCellProfil.text = profil.sexe
