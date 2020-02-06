@@ -21,7 +21,7 @@ class NewRunViewController: UIViewController {
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var badgeInfoLabel: UILabel!
   @IBOutlet weak var caloriesLabel: UILabel!
-  
+
   private var run: Run?
 
   // Objet que l'on va utiliser pour commencer et arrêter les services de localisation de l'application
@@ -50,7 +50,7 @@ class NewRunViewController: UIViewController {
     badgeStackView.isHidden = true
   }
 
-  // Permet de mettre en pause la mise à jour de la localisation et le timer quand l'utilisateur est en dehors de cette vue
+  // Permet de mettre en pause la mise à jour de la localisation+le timer quand l'utilisateur est en dehors de cette vue
   // Cela évite la surconsommation de la batterie du téléphone
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
@@ -159,7 +159,8 @@ class NewRunViewController: UIViewController {
     locationManager.delegate = self
     //activityType : aide l'application à consommer moins pendant la course de l'utilisateur
     locationManager.activityType = .fitness
-    // La distance horizontale minimale, en mètres, que l'appareil doit parcourir avant d'émettre une mise à jour de position.
+    // La distance horizontale minimale, en mètres, que l'appareil
+    //doit parcourir avant d'émettre une mise à jour de position.
     locationManager.distanceFilter = 10
     // Démarre la MaJ
     locationManager.startUpdatingLocation()
@@ -214,7 +215,8 @@ extension NewRunViewController: SegueHandlerType {
 // MARK: - Location Manager Delegate
 // Cette méthode est appelée à chaque fois que CoreLocation met à jour la localisation de l'utilisateur
 // Informations contenus dans ce tableau : latitude, longitude, timestamp..
-// On attend un peu que l'utilisateur bouge avant de mettre à jour les données de localisation, afin de ne pas avoir trop de données erronées
+// On attend un peu que l'utilisateur bouge avant de mettre à jour les données
+// de localisation, afin de ne pas avoir trop de données erronées
 
 extension NewRunViewController: CLLocationManagerDelegate {
 
@@ -225,8 +227,13 @@ extension NewRunViewController: CLLocationManagerDelegate {
 
       if let lastLocation = locationList.last {
         let delta = newLocation.distance(from: lastLocation)
+
+        // Impossibilité d'utiliser += avec Measurement
+        // swiftlint:disable shorthand_operator
         distance = distance + Measurement(value: delta, unit: UnitLength.meters)
-        // coordinées et region
+        // swiftlint:enable shorthand_operator
+
+        // coordonées et region
         // Permettent d'ajouter le segment blue sur la map et de faire la MaJ de cette map pour la garder
         // Focus sur le lieu où l'utilisateur fait sa course
         let coordinates = [lastLocation.coordinate, newLocation.coordinate]

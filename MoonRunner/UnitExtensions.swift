@@ -1,5 +1,6 @@
 /*
- Permet d'étendre la classe UnitSpeed, afin de pouvoir gérer le concep d'allure moyenne, qui n'est pas implanté directement dans xCode
+ Permet d'étendre la classe UnitSpeed, afin de pouvoir gérer le concep d'allure moyenne,
+ qui n'est pas implanté directement dans xCode
  Exemple d'allure moyenne : min/km, sec/metre
  */
 import Foundation

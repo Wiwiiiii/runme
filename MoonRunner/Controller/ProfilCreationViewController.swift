@@ -30,7 +30,6 @@ class ProfilCreationViewController: UIViewController {
     navigationController?.popViewController(animated: true)
   }
 
-
   /// Creation d'un profil depuis le model profile
   /// - Parameter sexe: String?
   /// - Parameter taille: Double?
@@ -46,6 +45,5 @@ class ProfilCreationViewController: UIViewController {
     return Profil(sexe: sexe, taille: taille, nom: nom, age: age,
                   prenom: prenom, email: email, poids: poids)
   }
-
 
 }

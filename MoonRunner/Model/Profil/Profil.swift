@@ -1,6 +1,6 @@
 import Foundation
 
-struct Profil{
+struct Profil {
   let sexe: String?
   let taille: Double?
   let nom: String?

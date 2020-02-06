@@ -12,7 +12,7 @@ class RunDetailsViewController: UIViewController {
   @IBOutlet weak var badgeImageView: UIImageView!
   @IBOutlet weak var badgeInfoButton: UIButton!
   @IBOutlet weak var caloriesLabel: UILabel!
-  
+
   var run: Run!
 
   override func viewDidLoad() {
@@ -172,31 +172,31 @@ class RunDetailsViewController: UIViewController {
   // Définition des couleurs lors du parcours, afin que l'utilisateur puisse voir où il a ralentit ou accéléré
   private func segmentColor(speed: Double, midSpeed: Double, slowestSpeed: Double, fastestSpeed: Double) -> UIColor {
     enum BaseColors {
-      static let r_red: CGFloat = 1
-      static let r_green: CGFloat = 20 / 255
-      static let r_blue: CGFloat = 44 / 255
+      static let rred: CGFloat = 1
+      static let rgreen: CGFloat = 20 / 255
+      static let rblue: CGFloat = 44 / 255
 
-      static let y_red: CGFloat = 1
-      static let y_green: CGFloat = 215 / 255
-      static let y_blue: CGFloat = 0
+      static let yred: CGFloat = 1
+      static let ygreen: CGFloat = 215 / 255
+      static let yblue: CGFloat = 0
 
-      static let g_red: CGFloat = 0
-      static let g_green: CGFloat = 146 / 255
-      static let g_blue: CGFloat = 78 / 255
+      static let gred: CGFloat = 0
+      static let ggreen: CGFloat = 146 / 255
+      static let gblue: CGFloat = 78 / 255
     }
 
     let red, green, blue: CGFloat
 
     if speed < midSpeed {
       let ratio = CGFloat((speed - slowestSpeed) / (midSpeed - slowestSpeed))
-      red = BaseColors.r_red + ratio * (BaseColors.y_red - BaseColors.r_red)
-      green = BaseColors.r_green + ratio * (BaseColors.y_green - BaseColors.r_green)
-      blue = BaseColors.r_blue + ratio * (BaseColors.y_blue - BaseColors.r_blue)
+      red = BaseColors.rred + ratio * (BaseColors.yred - BaseColors.rred)
+      green = BaseColors.rgreen + ratio * (BaseColors.ygreen - BaseColors.rgreen)
+      blue = BaseColors.rblue + ratio * (BaseColors.yblue - BaseColors.rblue)
     } else {
       let ratio = CGFloat((speed - midSpeed) / (fastestSpeed - midSpeed))
-      red = BaseColors.y_red + ratio * (BaseColors.g_red - BaseColors.y_red)
-      green = BaseColors.y_green + ratio * (BaseColors.g_green - BaseColors.y_green)
-      blue = BaseColors.y_blue + ratio * (BaseColors.g_blue - BaseColors.y_blue)
+      red = BaseColors.yred + ratio * (BaseColors.gred - BaseColors.yred)
+      green = BaseColors.ygreen + ratio * (BaseColors.ggreen - BaseColors.ygreen)
+      blue = BaseColors.yblue + ratio * (BaseColors.gblue - BaseColors.yblue)
     }
 
     return UIColor(red: red, green: green, blue: blue, alpha: 1)

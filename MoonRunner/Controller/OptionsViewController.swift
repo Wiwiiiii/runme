@@ -2,14 +2,12 @@ import Foundation
 import UIKit
 import AVFoundation
 
-
-class OptionsViewController: UIViewController{
-
+class OptionsViewController: UIViewController {
 
   @IBOutlet weak var soundSegment: UISegmentedControl!
 
-  let musicPlayer:AVAudioPlayer = AVAudioPlayer()
-  var IsMuted:Bool = false
+  let musicPlayer: AVAudioPlayer = AVAudioPlayer()
+  var isMuted: Bool = false
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -17,15 +15,12 @@ class OptionsViewController: UIViewController{
   }
 
   @IBAction func soundButton(_ sender: Any) {
-    if(soundSegment.selectedSegmentIndex == 0)
-    {
-      IsMuted = false
+    if soundSegment.selectedSegmentIndex == 0 {
+      isMuted = false
       musicPlayer.volume = 1
       musicPlayer.play()
-    }
-    else if(soundSegment.selectedSegmentIndex == 1)
-    {
-         IsMuted = true
+    } else if soundSegment.selectedSegmentIndex == 1 {
+         isMuted = true
          musicPlayer.volume = 0
          musicPlayer.stop()
     }

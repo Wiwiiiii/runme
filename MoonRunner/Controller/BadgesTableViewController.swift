@@ -29,7 +29,9 @@ class BadgesTableViewController: UITableViewController {
 /*
 Méthodes UITableViewDataSource standard requises par tous les UITableViewControllers
 Renvoyant le nombre de lignes et les cellules configurées au tableau.
-Tout comme dans la partie 1, vous réduisez le code «typé en chaîne» en retirant la cellule de la file d'attente via une méthode générique définie dans StoryboardSupport.swift.
+Tout comme dans la partie 1, vous réduisez le code «typé en chaîne» en
+retirant la cellule de la file d'attente via une méthode générique
+définie dans StoryboardSupport.swift.
  */
 extension BadgesTableViewController {
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +46,8 @@ extension BadgesTableViewController {
 }
 
 // MARK: - Navigation
-// Permet de passer un BadgeStatus à BadgeDetailsViewController lorsque l'utilisateur appuie sur un badge dans le tableau.
+// Permet de passer un BadgeStatus à BadgeDetailsViewController lorsque
+//l'utilisateur appuie sur un badge dans le tableau.
 extension BadgesTableViewController: SegueHandlerType {
   enum SegueIdentifier: String {
     case details = "BadgeDetailsViewController"
