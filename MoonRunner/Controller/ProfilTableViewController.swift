@@ -1,13 +1,18 @@
 import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ProfilTableViewController: UITableViewController {
 
   // Liaison interface - controller
 
   override func viewDidLoad() {
-  super.viewDidLoad()
-  loadSampleProfils()
+    super.viewDidLoad()
+     // swiftlint:disable line_length
+
+      // swiftlint:enable line_length
+    loadSampleProfils()
   }
 
   var profils = [Profil]()

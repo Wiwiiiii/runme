@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.8.0)
+  - Alamofire (4.9.1)
   - Firebase/Analytics (6.16.0):
     - Firebase/Core
   - Firebase/Core (6.16.0):
@@ -82,13 +82,15 @@ PODS:
   - PromisesObjC (1.2.8)
   - SwiftGifOrigin (1.7.0)
   - SwiftLint (0.38.2)
+  - SwiftyJSON (2.4.0)
 
 DEPENDENCIES:
-  - Alamofire (= 4.8)
+  - Alamofire
   - Firebase/Analytics
   - PromiseKit
   - SwiftGifOrigin (~> 1.7.0)
   - SwiftLint
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
@@ -109,9 +111,10 @@ SPEC REPOS:
     - PromisesObjC
     - SwiftGifOrigin
     - SwiftLint
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Firebase: 497158b816d0a86fc31babbd05546fcd7e6083ff
   FirebaseAnalytics: cf95d3aab897612783020fbd98401d5366f135ee
   FirebaseCore: 85064903ed6c28e47fec9c7bd149d94ba1b6b6e7
@@ -128,7 +131,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 8f5d2f903e1c9bcbc832fd16771e80a263ac6cbb
+  SwiftyJSON: 96918c1bf505efa50c4f72957018dd3452090c9c
 
-PODFILE CHECKSUM: 70c25a07571d196729b4e83d403121753370fca0
+PODFILE CHECKSUM: f407ad143d28aad2c9bd20aa50cc4b0180ee186f
 
 COCOAPODS: 1.8.4
