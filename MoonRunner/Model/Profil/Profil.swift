@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 struct Profil {
   let sexe: String?
@@ -9,4 +10,3 @@ struct Profil {
   let email: String?
   let poids: Double?
 }
-
