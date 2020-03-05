@@ -115,7 +115,7 @@ class NewRunViewController: UIViewController {
     print(castIDCourse)
     print(CourseVarGlobales.IDCourse)
     // swiftlint:disable line_length
-    AF.request("http://149.91.89.160:500/graphql?query=mutation%7B%20%20%20%20createCourse(%0A%20%20%20%20id%3A%20"+castIDCourse+"%2C%0A%20%20%20%20userid%3A%200%2C%0A%20%20%20%20distance%3A%20"+castDistanceReplace4+"%2C%0A%20%20%20%20temps%3A%20"+castTemps+"%2C%0A%20%20%20%20calories%3A%2050%2C%0A%20%20%20%20vitesse%3A%202.5%2C%0A%20%20)%0A%20%20%7B%0A%20%20%20%20%20%20id%2C%0A%20%20%20%20userid%2C%0A%20%20%20%20distance%2C%0A%20%20%20%20temps%2C%0A%20%20%20%20calories%2C%0A%20%20%20%20vitesse%0A%20%20%7D%0A%7D", method: .post, encoding: JSONEncoding.default)
+    AF.request("http://149.91.89.160:500/graphql?query=mutation%7B%20%20%20%20createCourse(%0A%20%20%20%20id%3A%20"+castIDCourse+"%2C%0A%20%20%20%20userid%3A%200%2C%0A%20%20%20%20distance%3A%20"+castDistanceReplace4+"%2C%0A%20%20%20%20temps%3A%20"+castTemps+"%2C%0A%20%20%20%20calories%3A%20"+castCaloriesReplace3+"%2C%0A%20%20%20%20vitesse%3A%20"+castVitesseReplace3+"%2C%0A%20%20)%0A%20%20%7B%0A%20%20%20%20%20%20id%2C%0A%20%20%20%20userid%2C%0A%20%20%20%20distance%2C%0A%20%20%20%20temps%2C%0A%20%20%20%20calories%2C%0A%20%20%20%20vitesse%0A%20%20%7D%0A%7D", method: .post, encoding: JSONEncoding.default)
         .responseJSON { response in
             if let valueSafe = response.value {
                 let json = JSON(valueSafe)
