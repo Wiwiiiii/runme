@@ -50,6 +50,11 @@
 		7F56006F23E2DC80002BB25C /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56006E23E2DC80002BB25C /* OptionsViewController.swift */; };
 		7FB3CE4B23DEFE91004665EC /* ProfilDetailSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */; };
 		7FB3CE4D23DEFEFC004665EC /* ProfilCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */; };
+		8400FDBA2411031E005BCA77 /* appicon20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8400FDB92411031E005BCA77 /* appicon20.png */; };
+		8400FDBC2411033B005BCA77 /* appicon167.png in Resources */ = {isa = PBXBuildFile; fileRef = 8400FDBB2411033B005BCA77 /* appicon167.png */; };
+		8400FDBE24110340005BCA77 /* appicon152.png in Resources */ = {isa = PBXBuildFile; fileRef = 8400FDBD24110340005BCA77 /* appicon152.png */; };
+		8400FDC02411034A005BCA77 /* appicon83.png in Resources */ = {isa = PBXBuildFile; fileRef = 8400FDBF2411034A005BCA77 /* appicon83.png */; };
+		8400FDC224110352005BCA77 /* appicon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8400FDC124110352005BCA77 /* appicon76.png */; };
 		9AB6E79BE993358E1ADDF6FB /* Pods_RunMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB053E2905C5637AA65C5B0 /* Pods_RunMe.framework */; };
 		F935B86823E0D0D2009F866E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F935B86723E0D0D2009F866E /* GoogleService-Info.plist */; };
 		F935B86B23E0D744009F866E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F935B86A23E0D744009F866E /* StringExtension.swift */; };
@@ -103,6 +108,11 @@
 		7F56006E23E2DC80002BB25C /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4A23DEFE91004665EC /* ProfilDetailSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilDetailSelectionViewController.swift; sourceTree = "<group>"; };
 		7FB3CE4C23DEFEFC004665EC /* ProfilCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCreationViewController.swift; sourceTree = "<group>"; };
+		8400FDB92411031E005BCA77 /* appicon20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon20.png; sourceTree = "<group>"; };
+		8400FDBB2411033B005BCA77 /* appicon167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon167.png; sourceTree = "<group>"; };
+		8400FDBD24110340005BCA77 /* appicon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon152.png; sourceTree = "<group>"; };
+		8400FDBF2411034A005BCA77 /* appicon83.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon83.png; sourceTree = "<group>"; };
+		8400FDC124110352005BCA77 /* appicon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon76.png; sourceTree = "<group>"; };
 		C457B60113BA5B8C03A7677A /* Pods-RunMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunMe.release.xcconfig"; path = "Target Support Files/Pods-RunMe/Pods-RunMe.release.xcconfig"; sourceTree = "<group>"; };
 		F935B86723E0D0D2009F866E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F935B86A23E0D744009F866E /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -167,8 +177,8 @@
 				F935B86723E0D0D2009F866E /* GoogleService-Info.plist */,
 				18888DC21E7F0FA80038A3AF /* AppDelegate.swift */,
 				7F50D2D623A1263600482404 /* Model */,
-				18CF26EB1E8028D40097F88C /* Controller */,
 				7F50D2D723A1265200482404 /* View */,
+				18CF26EB1E8028D40097F88C /* Controller */,
 				18888DDB1E80200C0038A3AF /* CoreData */,
 				7F2FDF7B23A238AA00466FE4 /* Images */,
 				18888DDA1E801FFB0038A3AF /* Supporting Files */,
@@ -229,15 +239,20 @@
 		7F2FDF7B23A238AA00466FE4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8400FDB92411031E005BCA77 /* appicon20.png */,
 				7F4A3C77240FC91A00B4BE26 /* appicon29.png */,
 				7F4A3C78240FC91A00B4BE26 /* appicon40.png */,
 				7F4A3C74240FC91A00B4BE26 /* appicon57.png */,
 				7F4A3C79240FC91A00B4BE26 /* appicon58.png */,
 				7F4A3C76240FC91A00B4BE26 /* appicon60.png */,
+				8400FDC124110352005BCA77 /* appicon76.png */,
 				7F4A3C75240FC91A00B4BE26 /* appicon80.png */,
 				7F4A3C7A240FC91A00B4BE26 /* appicon87.png */,
+				8400FDBF2411034A005BCA77 /* appicon83.png */,
 				7F4A3C7C240FC91A00B4BE26 /* appicon114.png */,
 				7F4A3C7F240FC91B00B4BE26 /* appicon120.png */,
+				8400FDBD24110340005BCA77 /* appicon152.png */,
+				8400FDBB2411033B005BCA77 /* appicon167.png */,
 				7F4A3C7E240FC91A00B4BE26 /* appicon180.png */,
 				7F4A3C7D240FC91A00B4BE26 /* appicon1024.png */,
 				7F2FDF7E23A23A0700466FE4 /* logo_noir.png */,
@@ -356,10 +371,13 @@
 				7F4A3C8B240FC91B00B4BE26 /* appicon180.png in Resources */,
 				18888DD01E7F0FA80038A3AF /* LaunchScreen.storyboard in Resources */,
 				7F4A3C82240FC91B00B4BE26 /* appicon80.png in Resources */,
+				8400FDBA2411031E005BCA77 /* appicon20.png in Resources */,
 				7F4A3C87240FC91B00B4BE26 /* appicon87.png in Resources */,
 				18888DCD1E7F0FA80038A3AF /* Assets.xcassets in Resources */,
 				7F2FDF7F23A23A0700466FE4 /* logo_noir.png in Resources */,
+				8400FDBC2411033B005BCA77 /* appicon167.png in Resources */,
 				18CF26EA1E80265F0097F88C /* badges.txt in Resources */,
+				8400FDBE24110340005BCA77 /* appicon152.png in Resources */,
 				7F4A3C85240FC91B00B4BE26 /* appicon40.png in Resources */,
 				7F33A00823E96A01004BB794 /* declinaison_logo_transparent.png in Resources */,
 				18888DC81E7F0FA80038A3AF /* Main.storyboard in Resources */,
@@ -367,7 +385,9 @@
 				7F4A3C8A240FC91B00B4BE26 /* appicon1024.png in Resources */,
 				7F4A3C84240FC91B00B4BE26 /* appicon29.png in Resources */,
 				7F4A3C86240FC91B00B4BE26 /* appicon58.png in Resources */,
+				8400FDC02411034A005BCA77 /* appicon83.png in Resources */,
 				F935B86823E0D0D2009F866E /* GoogleService-Info.plist in Resources */,
+				8400FDC224110352005BCA77 /* appicon76.png in Resources */,
 				7F4A3C83240FC91B00B4BE26 /* appicon60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

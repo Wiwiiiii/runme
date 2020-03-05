@@ -5,6 +5,8 @@ import UIKit
 import CoreLocation
 import MapKit
 import AVFoundation
+import Alamofire
+import SwiftyJSON
 
 class NewRunViewController: UIViewController {
 
@@ -63,6 +65,9 @@ class NewRunViewController: UIViewController {
     startRun()
   }
 
+  struct CourseVarGlobales {
+      static var IDCourse = 0
+  }
   // Termine la course
   // Permet de sauvegarder cette course ou non dans l'historique
   @IBAction func stopTapped() {
@@ -82,6 +87,43 @@ class NewRunViewController: UIViewController {
       _ = self.navigationController?.popToRootViewController(animated: true)
     })
 
+    let castDistance = String(self.distanceLabel.text!)
+    print("Distance:" + castDistance)
+    let castDistanceReplace = castDistance.replacingOccurrences(of: "km ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castDistanceReplace2 = castDistanceReplace.replacingOccurrences(of: "Distance: ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castDistanceReplace3 = castDistanceReplace2.replacingOccurrences(of: ", ?", with: ".", options: [.caseInsensitive, .regularExpression])
+    let castDistanceReplace4 = castDistanceReplace3.replacingOccurrences(of: " ?", with: "", options: [.caseInsensitive, .regularExpression])
+    print("DistanceReplace:" + castDistanceReplace4)
+    //var castDistance2 = String(self.distanceLabel.text ?? "")
+    //print("Distance2:" + castDistance2)
+    let castTemps = String(self.timeLabel.text!)
+    print("Temps:" + castTemps)
+    let castVitesse = String(self.paceLabel.text!)
+    print("Vitesse:" + castVitesse)
+    let castVitesseReplace = castVitesse.replacingOccurrences(of: "km/h ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castVitesseReplace2 = castVitesseReplace.replacingOccurrences(of: "Vitesse: ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castVitesseReplace3 = castVitesseReplace2.replacingOccurrences(of: " ?", with: "", options: [.caseInsensitive, .regularExpression])
+    print("VitesseReplace:" + castVitesseReplace3)
+    let castCalories = String(self.caloriesLabel.text!)
+    print("Calories:" + castCalories)
+    let castCaloriesReplace = castCalories.replacingOccurrences(of: "kcal ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castCaloriesReplace2 = castCaloriesReplace.replacingOccurrences(of: "Calories : ?", with: "", options: [.caseInsensitive, .regularExpression])
+    let castCaloriesReplace3 = castCaloriesReplace2.replacingOccurrences(of: " ?", with: "", options: [.caseInsensitive, .regularExpression])
+    print("CaloriesReplace:" + castCaloriesReplace3)
+    CourseVarGlobales.IDCourse+=1
+    let castIDCourse = String(CourseVarGlobales.IDCourse)
+    print(castIDCourse)
+    print(CourseVarGlobales.IDCourse)
+    // swiftlint:disable line_length
+    AF.request("http://149.91.89.160:500/graphql?query=mutation%7B%20%20%20%20createCourse(%0A%20%20%20%20id%3A%20"+castIDCourse+"%2C%0A%20%20%20%20userid%3A%200%2C%0A%20%20%20%20distance%3A%20"+castDistanceReplace4+"%2C%0A%20%20%20%20temps%3A%20"+castTemps+"%2C%0A%20%20%20%20calories%3A%2050%2C%0A%20%20%20%20vitesse%3A%202.5%2C%0A%20%20)%0A%20%20%7B%0A%20%20%20%20%20%20id%2C%0A%20%20%20%20userid%2C%0A%20%20%20%20distance%2C%0A%20%20%20%20temps%2C%0A%20%20%20%20calories%2C%0A%20%20%20%20vitesse%0A%20%20%7D%0A%7D", method: .post, encoding: JSONEncoding.default)
+        .responseJSON { response in
+            if let valueSafe = response.value {
+                let json = JSON(valueSafe)
+            } else {
+                print ("erreur dans le create de la course")
+            }
+    }
+    // swiftlint:enable line_length
     present(alertController, animated: true)
   }
 
